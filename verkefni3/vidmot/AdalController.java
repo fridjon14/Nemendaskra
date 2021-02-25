@@ -18,19 +18,16 @@ public class AdalController implements Initializable {
     private AnchorPane nyrNemDialog;
     private Nemendaskra nemendaskra;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nemendaskra = new Nemendaskra();
-    }
-
     @FXML
     private NyrNemandiDialogController nyrNemandiDialogController;
-
-
     @FXML
     private void NyrNemandiDialogHandler(ActionEvent event) {
         if (virkurIndex != -1)
             nyrNemandiDialogController.NyrNemandiDialogBirta();
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }
 
