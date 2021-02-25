@@ -4,7 +4,10 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import vidmot.gogn.Nemendaskra;
@@ -27,7 +30,8 @@ public class AdalController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        nyrNemandiDialogController = new NyrNemandiDialogController();
+       // Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("NyrNemandiDialog.fxml"));
     }
 }
 

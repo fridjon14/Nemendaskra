@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="nyrNemDialog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.NyrNemandiDialogController">
+<AnchorPane fx:id="fxNyrNemDialog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.NyrNemandiDialogController">
    <children>
       <DialogPane layoutX="2.0" layoutY="-1.0">
          <content>
@@ -28,7 +28,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="fxNetfang" text="Netfang:" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label text="Netfang:" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -44,7 +44,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </TextField>
-                  <TextField promptText="yourmail@example.com" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <TextField fx:id="fxNetfang" promptText="yourmail@example.com" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
@@ -107,10 +107,6 @@
                </children>
             </GridPane>
          </content>
-         <buttonTypes>
-            <ButtonType fx:constant="OK" />
-            <ButtonType fx:constant="CANCEL" />
-         </buttonTypes>
       </DialogPane>
    </children>
 </AnchorPane>
