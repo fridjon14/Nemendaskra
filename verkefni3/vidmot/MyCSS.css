@@ -1,0 +1,9 @@
+.root
+{
+-fx-background-color: gray;
+}
+.button{
+
+    -fx-pref-height: 60px;
+    -fx-pref-width: 250px;
+}
