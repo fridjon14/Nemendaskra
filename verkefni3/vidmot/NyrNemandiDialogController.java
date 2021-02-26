@@ -4,19 +4,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import vidmot.gogn.Nemendaskra;
 
 public class NyrNemandiDialogController implements Initializable {
 
+
+
     @FXML
-    private AnchorPane fxNyrNemDialog;
+    private DialogPane dpNyrNemandiDialogPane;
     @FXML
     private TextField fxNafn;
     @FXML
@@ -38,25 +39,36 @@ public class NyrNemandiDialogController implements Initializable {
      * stofna nýjan nemanda.
      */
     public void NyrNemandiDialogBirta() {
-        //nyrNemDialog
-        DialogPane p = new DialogPane();
-        fxNyrNemDialog.setVisible(true);
 
-        p.setContent(fxNyrNemDialog);
+    try {
+        //fxNyrNemDialog = nyrNemandiDialogContro
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("NyrNemandiDialog.fxml"));
+        dpNyrNemandiDialogPane = fxmlLoader.load();
+        //Parent parent = fxmlLoader.load();
+        NyrNemandiDialogController nyrNemandiController = fxmlLoader.getController();
+        //NemendaskraController.setNemandi(nemandi);
+        //nyrNemandiController.setVisible(true);
+
+        //dpNyrNemandiDialogPane.setContent(dpNyrNemandiDialogPane);
 
         Dialog<ButtonType> d = new Dialog();
-        d.setDialogPane(p);
+        d.setDialogPane(dpNyrNemandiDialogPane);
+        d.showAndWait();
 
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
         // Hnapparnir Í lagi og hætta við búnir til og bætt við
+       /*
         ButtonType iLagi = new ButtonType("Í lagi",
                 ButtonBar.ButtonData.OK_DONE);
-        d.getDialogPane().getButtonTypes().add(iLagi);
+        apNyrNemDialog.getDialogPane().getButtonTypes().add(iLagi);
 
         ButtonType haettaVid = new ButtonType("Hætta við",
                 ButtonBar.ButtonData.CANCEL_CLOSE);
-        d.getDialogPane().getButtonTypes().add(haettaVid);
-
-        d.showAndWait();
+        nyrNemPane.getDialogPane().getButtonTypes().add(haettaVid);
+*/
 /*
         try{
             FXMLLoader fxmlLoader = new FXMLLoader();

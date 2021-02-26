@@ -4,11 +4,9 @@ package vidmot;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import vidmot.gogn.Nemendaskra;
+import vidmot.gogn.Nemandi;
 import vinnsla.Deild;
 import vinnsla.Namsleid;
 import vinnsla.Svid;
@@ -28,7 +26,7 @@ public class NemendaskraController implements Initializable {
     public static final String SVID = "Svid.txt";
     public static final String DEILD = "Deild.txt";
 
-    private Nemendaskra nemendaskra;
+    private Nemandi nemandi;
 
 
     public ComboBox<Svid> fxSvid;        // combobox fyrir svið
@@ -68,12 +66,9 @@ public class NemendaskraController implements Initializable {
         catch (NullPointerException e) {
             e.printStackTrace();    // prentum út rakninguna
         }
+        //public void setNemandi(){
 
 
         fxDeild.setItems(obsDeild);
     }
-
-
-
-
 }

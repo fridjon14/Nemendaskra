@@ -1,16 +1,10 @@
 package vidmot;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
-import vidmot.gogn.Nemendaskra;
+import vidmot.gogn.Nemandi;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,9 +12,10 @@ import java.util.ResourceBundle;
 public class AdalController implements Initializable {
 
     private int virkurIndex=0;
-    private AnchorPane nyrNemDialog;
-    private Nemendaskra nemendaskra;
+    private Nemandi nemandi;
 
+    @FXML
+    private AnchorPane fxNyrNemandiDialog;
     @FXML
     private NyrNemandiDialogController nyrNemandiDialogController;
     @FXML
@@ -31,7 +26,16 @@ public class AdalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nyrNemandiDialogController = new NyrNemandiDialogController();
+        fxNyrNemandiDialog = getFxNyrNemandiDialog();
        // Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("NyrNemandiDialog.fxml"));
+    }
+
+    public AnchorPane getFxNyrNemandiDialog() {
+        return fxNyrNemandiDialog;
+    }
+
+    public void setFxNyrNemandiDialog(AnchorPane fxNyrNemandiDialog) {
+        this.fxNyrNemandiDialog = fxNyrNemandiDialog;
     }
 }
 

@@ -6,26 +6,28 @@ package vidmot.gogn;
  * @author Friðjón Sigvaldason frs5@hi.is
  * Háskóli Íslands
  */
-public class Nemendaskra {
+public class Nemandi {
     private String nafn;
     private String netfang;
     private String svid;
     private String deild;
     private String namsleid;
 
-    public Nemendaskra() {
+    public Nemandi() {
 
     }
 
-    /*
-    public Nemendaskra(String nafn, String netfang, String svid, String deild, String namsleid) {
+
+    public Nemandi(String nafn, String netfang, String svid, String deild, String namsleid) {
         this.nafn = nafn;
         this.netfang = netfang;
         this.svid = svid;
         this.deild = deild;
         this.namsleid = namsleid;
     }
-    */
+    public void setNemandi(Nemandi nemandi){
+
+    }
 
     public String getNafn() {
         return nafn;
@@ -62,7 +64,6 @@ public class Nemendaskra {
     }
 
     public void setNamsleid(String namsleid) { this.namsleid = namsleid; }
-
 
     @Override
     public String toString() {
